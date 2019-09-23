@@ -4,23 +4,44 @@
     padding: 0;
 }
 
+body {
+    background-color: #a1fffd;
+}
+
 h1 {
     text-align: center;
     font-family: 'Ultra', serif;
     font-size: 60px;
+    font-family: 'Yesteryear', cursive;
+    padding-top: 20px;
 }
 
 h2 {
     text-align: right;
-    padding: 0 10px 0 10px;
+    padding: 10px 10px 0 10px;
+    height: 70px;
     font-family: 'Ultra', serif;
-    font-size: 44px;
+    font-size: 38px;
     letter-spacing: 3px;
+    background-color: #368dff;
+    color: #fff;
+}
+
+button {
+    font-family: 'Ultra', serif;
+    font-size: 30px;
+    color: #fff;
+    background-color: #368dff;
+    border: 1px solid #000;
+}
+
+button:hover {
+    background-color: #94c2ff;
+    cursor: grab;
 }
 
 .main-btn {
-    border: 1px solid black;
-    box-sizing: border-box;
+   box-sizing: border-box;
 }
 
 .ops-btn {
@@ -31,9 +52,9 @@ h2 {
 .display {
     border: 1px solid black;
     width: 21%;
-    height: 50px;
+    height: 70px;
     margin: 100px auto;
-    margin-bottom: 0px;
+    margin-bottom: 0px;   
 }
 
 .container {
