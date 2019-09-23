@@ -43,6 +43,7 @@ const operate = function(operands, operator) {
 let operator = undefined;
 let firstValue = undefined;
 let secondValue = undefined;
+let result = undefined;
 
 CLEAR.addEventListener('click', () => {
     firstOperand = 0;
@@ -87,3 +88,95 @@ ZERO.addEventListener('click', () => {
         DISPLAY.textContent += String('0');
     }
 })
+
+ONE.addEventListener('click', () => {
+    if (DISPLAY.textContent === '0') {DISPLAY.textContent = '1'}
+    else if (DISPLAY.textContent.length === 12) {}
+    else {
+        DISPLAY.textContent += '1';
+    }
+})
+
+TWO.addEventListener('click', () => {
+    if (DISPLAY.textContent === '0') {DISPLAY.textContent = '2'}
+    else if (DISPLAY.textContent.length === 12) {}
+    else {
+        DISPLAY.textContent += '2';
+    }
+})
+
+THREE.addEventListener('click', () => {
+    if (DISPLAY.textContent === '0') {DISPLAY.textContent = '3'}
+    else if (DISPLAY.textContent.length === 12) {}
+    else {
+        DISPLAY.textContent += '3';
+    }
+})
+
+FOUR.addEventListener('click', () => {
+    if (DISPLAY.textContent === '0') {DISPLAY.textContent = '4'}
+    else if (DISPLAY.textContent.length === 12) {}
+    else {
+        DISPLAY.textContent += '4';
+    }
+})
+
+FIVE.addEventListener('click', () => {
+    if (DISPLAY.textContent === '0') {DISPLAY.textContent = '5'}
+    else if (DISPLAY.textContent.length === 12) {}
+    else {
+        DISPLAY.textContent += '5';
+    }
+})
+
+SIX.addEventListener('click', () => {
+    if (DISPLAY.textContent === '0') {DISPLAY.textContent = '6'}
+    else if (DISPLAY.textContent.length === 12) {}
+    else {
+        DISPLAY.textContent += '6';
+    }
+})
+
+SEVEN.addEventListener('click', () => {
+    if (DISPLAY.textContent === '0') {DISPLAY.textContent = '7'}
+    else if (DISPLAY.textContent.length === 12) {}
+    else {
+        DISPLAY.textContent += '7';
+    }
+})
+
+EIGHT.addEventListener('click', () => {
+    if (DISPLAY.textContent === '0') {DISPLAY.textContent = '8'}
+    else if (DISPLAY.textContent.length === 12) {}
+    else {
+        DISPLAY.textContent += '8';
+    }
+})
+
+NINE.addEventListener('click', () => {
+    if (DISPLAY.textContent === '0') {DISPLAY.textContent = '9'}
+    else if (DISPLAY.textContent.length === 12) {}
+    else {
+        DISPLAY.textContent += '9';
+    }
+})
+
+DECIMAL.addEventListener('click', () => {
+    if (DISPLAY.textContent === '0') {DISPLAY.textContent = '0.'}
+    else if (DISPLAY.textContent.length === 12) {}
+    else {
+        DISPLAY.textContent += '.';
+    }
+})
+
+BACKSPACE.addEventListener('click', () => {
+    if (DISPLAY.textContent === '0') {}
+    else if (DISPLAY.textContent.length === 1) {DISPLAY.textContent = '0'}
+    else {DISPLAY.textContent = DISPLAY.textContent.slice(0, DISPLAY.textContent.length - 1)}
+});
+
+EQUAL.addEventListener('click', () => {
+    secondOperand = Number(DISPLAY.textContent);
+    result = operate([firstOperand, secondOperand], operator);
+    DISPLAY.textContent = String(result);
+});
